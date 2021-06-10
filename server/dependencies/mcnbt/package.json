@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "name": "mcnbt",
+        "raw": "mcnbt",
+        "rawSpec": "",
+        "scope": null,
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\Fortuna\\Documents\\BitBucket\\PineappleJS"
+    ]
+  ],
+  "_from": "mcnbt@latest",
+  "_id": "mcnbt@0.0.7",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/mcnbt",
+  "_nodeVersion": "4.2.1",
+  "_npmUser": {
+    "email": "admin@xcoder.in",
+    "name": "xadillax"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "mcnbt",
+    "raw": "mcnbt",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/mcnbt/-/mcnbt-0.0.7.tgz",
+  "_shasum": "7131d703d58dfcad48a74b7966c2f53843258cfa",
+  "_shrinkwrap": null,
+  "_spec": "mcnbt",
+  "_where": "C:\\Users\\Fortuna\\Documents\\BitBucket\\PineappleJS",
+  "author": {
+    "name": "XadillaX"
+  },
+  "bugs": {
+    "url": "https://github.com/XadillaX/mcnbt/issues"
+  },
+  "dependencies": {
+    "bignum": "^0.11.0"
+  },
+  "description": "Yet another Minecraft NBT format file / buffer parser for Node.js.",
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "should": "^7.1.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "7131d703d58dfcad48a74b7966c2f53843258cfa",
+    "tarball": "https://registry.npmjs.org/mcnbt/-/mcnbt-0.0.7.tgz"
+  },
+  "gitHead": "ca5efa3f5ef5c984f9b695c28a128c10235604e1",
+  "homepage": "https://github.com/XadillaX/mcnbt",
+  "keywords": [
+    "NBT",
+    "Minecraft"
+  ],
+  "license": "MIT",
+  "main": "nbt.js",
+  "maintainers": [
+    {
+      "email": "admin@xcoder.in",
+      "name": "xadillax"
+    }
+  ],
+  "name": "mcnbt",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XadillaX/mcnbt.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "version": "0.0.7"
+}

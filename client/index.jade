@@ -1,0 +1,24 @@
+doctype html
+html
+	head 
+		title PineAppleJS
+		link(rel="stylesheet" href="components/css/monokai.css")
+		script(defer src="components/js/findAndReplaceDOMText.js")
+		script(defer src="components/js/editor.js")
+	body
+		div(id="title-header-container")
+			h2(id="title-header") 
+				span(id="title-prefix") PineApple
+				span(id="title-sufix") JS
+			h4(id="title-sub-header")
+				span A MINECRAFT PREPROCESSOR
+		div(id="editor-wrapper")
+			div(class="col-1" id="row-counter")
+				div 1
+			div(class="col-11" id="editor" spellcheck="false" contenteditable="true")
+				div
+					br
+		form(method="post" action="/schematic" onsubmit="editorCtrl.setTextContent()")
+			input(id="editor-hidden-input" type="hidden" name="source" value="")
+			input(type="text" id="editor-filename" name="filename" value="")
+			button(id="editor-button" type="submit") Send

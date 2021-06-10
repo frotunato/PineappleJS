@@ -1,0 +1,24 @@
+{
+  "name": "PineappleJS",
+  "homepage": "https://github.com/frotunato/PineappleJS",
+  "authors": [
+    "frotunato <frotunato@gmail.com>"
+  ],
+  "description": "A Minecraft preprocessor",
+  "main": "/client/app/app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "bower-angular#^1.5.7"
+  },
+  "resolutions": {
+    "angular": "^1.5.7"
+  }
+}

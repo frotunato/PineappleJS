@@ -1,0 +1,48 @@
+var playerInGeneralArea = @a[18,3,-14,dx=-19,dy=5,dz=-10]
+var playerInAltar = @a[1,6,-18,dx=-1,dy=1,dz=-1]
+var playerInCombatArea = @a[17,4,-15,dx=-5,dy=1,dz=-8]
+var moyoIsAlive = @e[type=Zombie,name=Moyo]
+var playerInPhase0 = @a[score_moyoPhase0_min=1]
+var playerInPhase1 = @a[score_moyoPhase1_min=1]
+if (/testfor @a) {
+	::/scoreboard objectives add moyoPhase0 dummy
+	::/scoreboard objectives add moyoPhase1 dummy
+	::/scoreboard objectives add moyoTimer dummy
+	if (/testfor playerInGeneralArea) {
+		if (/testfor playerInAltar) {
+			if (!/testfor moyoIsAlive) {
+				::/scoreboard players add playerInAltar moyoPhase0 1
+				::/summon Zombie 1 5 -18 {CustomName:"Moyo",Invulnerable:1,NoAI:1,Silent:1}
+				::/spreadplayers 14 -18 0 3 false playerInPhase0
+			} 
+		} else if (/testfor moyoIsAlive) {
+			if (/testfor playerInPhase0) {
+				::/say you are in phase 0...
+				if (!/testfor playerInCombatArea) {
+					::/spreadqplayers 14 -18 0 3 false playerInPhase0
+					::/say you cannot run
+				}
+				::/execute @e[type=ArmorStand] ~ ~ ~ detect 15 7 -22 minecraft:air -1 /say block 1
+				::/execute @e[type=ArmorStand] ~ ~ ~ detect 13 7 -20 minecraft:air -1 /say block 2
+				::/execute @e[type=ArmorStand] ~ ~ ~ detect 13 7 -16 minecraft:air -1 /say block 3
+				::/execute @e[type=ArmorStand] ~ ~ ~ detect 17 7 -16 minecraft:air -1 /say block 4
+				if (/testforblocks 12 7 -15 17 7 -23 12 8 -15 all) {
+					::/say all are broke, starting counter
+					::/scoreboard players set playerInPhase0 moyoPhase1 1
+					::/scoreboard players set playerInPhase0 moyoPhase0 0
+					::/scoreboard players set playerInPhase1 moyoCounter 1
+				}
+			} else if (/testfor playerInPhase1) {
+				::/say phase1 fired, counting down...
+				if (!/scoreboard players test f0rtunato moyoTimer 200 205) {
+					/scoreboard players add @a[score_moyoTimer] moyoTimer 1				
+				} else if (/scoreboard players test f0rtunato moyoTimer 200 205) {
+					::/say ended counting, resetting...
+					::scoreboard players set playerInPhase1 moyoPhase0 1
+					::scoreboard players set playerInPhase0 moyoPhase1 0
+					::scoreboard players set playerInPhase0 moyoTimer 0
+				}
+			}
+		}
+	}
+}
