@@ -84,6 +84,7 @@ This is the amount of blocks that the code from above generates:
 ![image](https://github.com/frotunato/PineappleJS/assets/5445756/9c4161c3-8c7f-495e-b8b4-7bf41a36f63e)
 
 This other cube is from an input with 3k lines of code:
+
 ![image](https://github.com/frotunato/PineappleJS/assets/5445756/158622da-b8a9-479b-bb15-a20b92f8d8bb)
 
 
