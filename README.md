@@ -91,7 +91,7 @@ This other cube is from an input with 3k lines of code:
 
 ### What is this for?
 
-Back in 2014, mapmaking was a popular thing for Minecraft. It wasn't only about creating pretty environments; usually they were heavyly scripted to achieve custom gameplay.
+Back in 2014, mapmaking was a popular thing for Minecraft. It wasn't only about creating pretty environments; usually they were heavily scripted to achieve custom gameplay.
 
 The process of implementing such logic was painful, the reason being is that each "line of code" had to be represented by at least one block inside the game. The blocks also had to be located (and oriented!) in a specific way. Keeping track of all of those blocks was a nightmare. Performance was an issue too for many reasons. A few of them:
 
