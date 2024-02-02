@@ -105,12 +105,13 @@ The process of implementing such logic was painful, the reason being is that eac
 Pretty much all of the above. The main idea is that such logic shouldn't be written inside the game as blocks, but outside as code. This is piece of software takes a bunch of lines of code and gives the user a .schematic file which contains the necessary blocks. Not only that, but it arranges them in the optimal space (a chunk), and does some mumbo jumbo to improve code execution.
 
 ### The good
-It works, and it's relatively simple to use. I learned a lot of stuff about programming languages and 3D spatial positioning. Also, this was an original idea. To this day, no such tool like this exist!.
+It works, and it's relatively simple to use. I learned a lot of stuff about programming languages and 3D spatial positioning. Also, this was an original idea. To this day, no such tool like this exist!. 
 
 ### The not so good
 After the core functionality was implemented, I got too ambitious trying to develop a web code editor (autocompleting, syntax highlighting, code linting...). It got way too complex and I gave out. Oh well. Providing the code in a .txt file is an option anyways.
 
-
+### Why so few commits?
+Originally this project was hosted in a private repository. A few years ago I decided to publish the source code.
 
 ## License
 
