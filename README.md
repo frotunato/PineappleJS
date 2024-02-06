@@ -12,15 +12,15 @@ node app
 
 ## How to use it?
 - Start the web server and access the gui
-- Write some code
+- Write some code!
 - Download the generated .schematic file
 - Use MCedit 0.13 to open it
 
 ## An input example
 
-- Declare variables using the 'var' keyword.
-- Use if/else statements. 
-- Prefix a command with '::' to only execute it once.
+- Declare variables using the 'var' keyword. You can use them as part of any command.
+- Use if/else statements as you please, there is no nesting limit nor performance penalty.
+- Prefix a command with '::' to only execute it once, otherwise it will execute once per game tick.
 
 ```
 var playerInGeneralArea = @a[18,3,-14,dx=-19,dy=5,dz=-10]
@@ -102,7 +102,7 @@ The process of implementing such logic was painful, the reason being is that eac
 
 
 ### What does this solve?
-Pretty much all of the above. The main idea is that such logic shouldn't be written inside the game as blocks, but outside as code. This is piece of software takes a bunch of lines of code and gives the user a .schematic file which contains the necessary blocks. Not only that, but it arranges them in the optimal space (a chunk), and does some mumbo jumbo to improve code execution.
+Pretty much all of the above. The main idea is that such logic shouldn't be written inside the game as blocks, but outside as code. This utility takes a bunch of lines of code and gives the user a .schematic file which contains the necessary blocks. Not only that, but it arranges them in the optimal space (a chunk), and does some mumbo jumbo to improve code execution.
 
 ### The good
 It works, and it's relatively simple to use. I learned a lot of stuff about programming languages and 3D spatial positioning. Also, this was an original idea. To this day, no such tool like this exist!. 
@@ -111,7 +111,7 @@ It works, and it's relatively simple to use. I learned a lot of stuff about prog
 After the core functionality was implemented, I got too ambitious trying to develop a web code editor (autocompleting, syntax highlighting, code linting...). It got way too complex and I gave out. Oh well. Providing the code in a .txt file is an option anyways.
 
 ### Why so few commits?
-Originally this project was hosted in a private repository. A few years ago I decided to publish the source code.
+Originally this project was hosted in a private repository. A few years ago I decided to release the source code.
 
 ## License
 
