@@ -1,5 +1,5 @@
 # PineappleJS
-An utility that allows you to generate Minecraft command blocks from code.
+A utility that allows you to generate Minecraft command blocks from code.
 
 ## Installation
 
@@ -11,7 +11,7 @@ node app
 ```
 
 ## How to use it?
-- Start the web server and access the gui
+- Start the web server and access the GUI
 - Write some code!
 - Download the generated .schematic file
 - Use MCedit 0.13 to open it
@@ -19,8 +19,8 @@ node app
 ## An input example
 
 - Declare variables using the 'var' keyword. You can use them as part of any command.
-- Use if/else statements as you please, there is no nesting limit nor performance penalty.
-- Prefix a command with '::' to only execute it once, otherwise it will execute once per game tick.
+- Use if/else statements as you please; there is no nesting limit nor performance penalty.
+- Prefix a command with '::' to only execute it once; otherwise, it will execute once per game tick.
 
 ```
 var playerInGeneralArea = @a[18,3,-14,dx=-19,dy=5,dz=-10]
@@ -92,27 +92,23 @@ This other cube is from an input with 3k lines of code:
 
 ### What is this for?
 
-Back in 2014, mapmaking was a popular thing for Minecraft. It wasn't only about creating pretty environments; usually they were heavily scripted to achieve custom gameplay.
+Back in 2014, mapmaking was a popular thing for Minecraft. It wasn't only about creating pretty environments; usually, they were heavily scripted to achieve custom gameplay.
 
 The process of implementing such logic was painful, the reason being is that each "line of code" had to be represented by at least one block inside the game. The blocks also had to be located (and oriented!) in a specific way. Keeping track of all of those blocks was a nightmare. Performance was an issue too for many reasons. A few of them:
 
-- The game didn't run the "lines of code" sequentially, but rather simultaneously. Going the 'naive way' was a garanteed disaster, specially when nesting conditions.
-- Such blocks should be preferrebly located in the same "chunk" (a 16x16x256 space). Having to cram things is no bueno for readability, and horrible to debug.
-- Some statements were executed in the game's main loop, which runned at 20hz. Once you go big, this is a problem.
+- The game didn't run the "lines of code" sequentially, but rather simultaneously. Going the 'naive way' was a guaranteed disaster, especially when nesting conditions.
+- Such blocks should be preferably located in the same "chunk" (a 16x16x256 space). Having to cram things is no bueno for readability, and horrible to debug.
+- Some statements were executed in the game's main loop, which ran at 20hz. Once you go big, this is a problem.
 
 
 ### What does this solve?
-Pretty much all of the above. The main idea is that such logic shouldn't be written inside the game as blocks, but outside as code. This utility takes a bunch of lines of code and gives the user a .schematic file which contains the necessary blocks. Not only that, but it arranges them in the optimal space (a chunk), and does some mumbo jumbo to improve code execution.
+Pretty much all of the above. The main idea is that such logic shouldn't be written inside the game as blocks but outside as code. This utility takes a bunch of lines of code and gives the user a .schematic file that contains the necessary blocks. Not only that, but it arranges them in the optimal space (a chunk), and does some mumbo jumbo to improve code execution.
 
 ### The good
-It works, and it's relatively simple to use. I learned a lot of stuff about programming languages and 3D spatial positioning. Also, this was an original idea. To this day, no such tool like this exist!. 
+It works, and it's relatively simple to use. I learned a lot of stuff about programming languages and 3D spatial positioning. Also, this was an original idea. To this day, no such tool like this exists!.
 
 ### The not so good
-After the core functionality was implemented, I got too ambitious trying to develop a web code editor (autocompleting, syntax highlighting, code linting...). It got way too complex and I gave out. Oh well. Providing the code in a .txt file is an option anyways.
+After the core functionality was implemented, I got too ambitious trying to develop a web code editor (auto-completing, syntax highlighting, code linting...). It got way too complex, and I gave up. Oh well. Providing the code in a .txt file is an option anyways.
 
 ### Why so few commits?
-Originally this project was hosted in a private repository. A few years ago I decided to release the source code.
-
-## License
-
-MIT
+Originally, this project was hosted in a private repository. A few years ago I decided
