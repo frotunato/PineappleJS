@@ -111,4 +111,8 @@ It works, and it's relatively simple to use. I learned a lot of stuff about prog
 After the core functionality was implemented, I got too ambitious trying to develop a web code editor (auto-completing, syntax highlighting, code linting...). It got way too complex, and I gave up. Oh well. Providing the code in a .txt file is an option anyways.
 
 ### Why so few commits?
-Originally, this project was hosted in a private repository. A few years ago I decided
+Originally, this project was hosted in a private repository. A few years ago I decided to release the source code.
+
+## License
+
+MIT
